@@ -3,6 +3,7 @@ using JG.FinTechTest.GiftAid;
 using JustGivingApi.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace JG.FinTechTest.Controllers
 {
@@ -26,7 +27,19 @@ namespace JG.FinTechTest.Controllers
         {
             var response = new GiftAidResponse();
             response.DonationAmount = amount;
-            response.GiftAidAmount = _calc.Calculate(amount);
+
+            try
+            {
+                response.GiftAidAmount = _calc.Calculate(amount);
+            }
+            catch (FailedValidationException e)
+            {
+                return BadRequest(e.Message); //Return help msg to the user.
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message); //Unknown error occcured - i deally all exceptions would be logged to the the application logger (not implmented here)
+            }
 
             return Ok(response);
         }
