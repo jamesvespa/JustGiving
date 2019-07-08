@@ -1,5 +1,5 @@
 ﻿using System;
-namespace JG.FinTechTest.GiftAidCalculator
+namespace JG.FinTechTest.GiftAid
 {
     public class FailedInitialisationException : Exception
     {

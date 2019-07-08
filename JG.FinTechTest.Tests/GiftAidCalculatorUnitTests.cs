@@ -1,5 +1,4 @@
 using JG.FinTechTest.GiftAid;
-using JG.FinTechTest.GiftAidCalculator;
 using NUnit.Framework;
 using System;
 
