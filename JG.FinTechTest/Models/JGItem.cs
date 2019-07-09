@@ -10,7 +10,12 @@ namespace JustGivingApi.Models
         [Required]
         public string Name { get; set; }
 
-        [DefaultValue(false)]
-        public bool IsComplete { get; set; }
+        [Required]
+        public string PostCode { get; set; }
+
+        [Required]
+        public double DonationAmount { get; set; }
+
+        public double GiftAidAmount { get; set; }
     }
 }

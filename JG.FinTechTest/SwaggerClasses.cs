@@ -58,19 +58,17 @@ public class Parameter
     public bool required { get; set; }
 }
 
-//public class Definitions
-//{
-//    public Giftaidresponse GiftAidResponse { get; set; }
-//}
+public class Definitions
+{
+    public Giftaidresponse GiftAidResponse { get; set; }
+}
 
-//public class Giftaidresponse
-//{
-//    public string type { get; set; }
-//    public string[] required { get; set; }
-//    public Properties properties { get; set; }
-//}
-
-
+public class Giftaidresponse
+{
+    public string type { get; set; }
+    public string[] required { get; set; }
+    public Properties properties { get; set; }
+}
 
 public class Properties
 {
